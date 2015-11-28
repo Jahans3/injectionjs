@@ -4,12 +4,24 @@
 
 var main = document.getElementsByClassName('container')[0];
 
-main.style.height = '0px';
-main.style.width = '0px';
-main.style.backgroundColor = 'red';
+var defaults = {
+    'cwidth' : 450,
+    'cheight' : 450,
+    'cBgColour' : 'red'
+};
+
+var setDimensions = function(element, object){
+    element.style.height = object.cheight.toString() + 'px';
+    element.style.width = object.cwidth.toString() + 'px';
+    element.style.backgroundColor = object.cBgColour;
+};
+
+setDimensions(main, defaults);
 
 
-
-
+// Initiate function
+//    import relevant css
+//    create elements
+//
 
 
