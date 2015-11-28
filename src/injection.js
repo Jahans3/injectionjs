@@ -3,7 +3,7 @@
  */
 
 var defaults = {
-    'gridSize' : 12 // Max 12
+    'gridSize' : 6
 };
 
 var setBase = function(){

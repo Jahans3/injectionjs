@@ -1,15 +1,15 @@
 # injectionjs
 
-Create plugin to allow users to generate custom HTML by using only a single html tag with a specific class.
+Library enabling users to dynamically generate content using JavaScript.
 
-All styles and scripts will be dynamically created by the widget’s JavaScript file. 
+Creates a user-defined table of divs that fits to a container element, each cell will contain custom content that can be dynamically altered.
 
 Example project structure:
 
 ```
 widget/
 	widget.js
-	config.son
+	config.json
  ```
 
-Config will contain any customisable options for the widget, be they scripts or styles.
+Config will contain any customisable options for the widget.
