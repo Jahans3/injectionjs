@@ -6,8 +6,10 @@ All styles and scripts will be dynamically created by the widget’s JavaScript 
 
 Example project structure:
 
+```
 widget/
 	widget.js
 	config.son
+ ```
 
 Config will contain any customisable options for the widget, be they scripts or styles.
