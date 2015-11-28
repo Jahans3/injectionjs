@@ -10,18 +10,20 @@ var defaults = {
     'cBgColour' : 'red'
 };
 
-var setDimensions = function(element, object){
-    element.style.height = object.cheight.toString() + 'px';
-    element.style.width = object.cwidth.toString() + 'px';
+var setBase = function(element, object){
+    document.body.style.padding = 0;
+    document.body.style.margin = 0;
+    element.style.height = window.innerHeight.toString() + 'px';
+    element.style.width = window.innerWidth.toString() + 'px';
     element.style.backgroundColor = object.cBgColour;
 };
 
-setDimensions(main, defaults);
+setBase(main, defaults);
 
 
 // Initiate function
+//    set outer wrapper and inner wrappers (grid of divs)
 //    import relevant css
-//    create elements
-//
+//    create elements (build widgets)
 
 
