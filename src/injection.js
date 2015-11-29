@@ -92,8 +92,6 @@ var sharedStyles = function(){
 var protoWidget = function(element){
     var widgetWrapper = document.createElement('div');
 
-    console.log(element.innerHeight)
-
     widgetWrapper.style.width = '100%';
     widgetWrapper.style.height = '100%';
     widgetWrapper.style.textAlign = 'center';
