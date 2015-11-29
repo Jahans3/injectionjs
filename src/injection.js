@@ -3,7 +3,7 @@
  */
 
 var defaults = {
-    'gridSize' : 6
+    'gridSize' : 8
 };
 
 var setBase = function(){
@@ -86,9 +86,27 @@ var sharedStyles = function(){
 
         colour > 4 ? colour = 0 : colour++
     }
+    protoWidget(allCells[0]);
 };
 
-setBase(defaults);
+var protoWidget = function(element){
+    var widgetWrapper = document.createElement('div');
+
+    console.log(element.innerHeight)
+
+    widgetWrapper.style.width = '100%';
+    widgetWrapper.style.height = '100%';
+    widgetWrapper.style.textAlign = 'center';
+    widgetWrapper.style.border = '10px solid darkred';
+    widgetWrapper.style.boxSizing = 'border-box';
+    widgetWrapper.style.fontSize = '38px';
+    widgetWrapper.style.fontFamily = '"Lucida Console", Monaco, monospace';
+    widgetWrapper.innerHTML = 'Widget';
+
+    element.appendChild(widgetWrapper);
+};
+
+document.body.addEventListener('load', setBase(defaults));
 
 
 // Initiate function
