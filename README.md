@@ -7,8 +7,8 @@ Creates a user-defined table of divs that fits to a container element, each cell
 Example project structure:
 
 ```
-widget/
-	widget.js
+injectionjs/
+	injection.js
 	config.json
  ```
 

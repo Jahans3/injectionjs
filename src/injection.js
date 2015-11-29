@@ -14,7 +14,7 @@ var setBase = function(){
 
     main.style.height = window.innerHeight.toString() + 'px';
     main.style.width = window.innerWidth.toString() + 'px';
-    main.style.backgroundColor = 'red';
+    main.style.backgroundColor = 'lightgrey';
 
     defineGrid(main, defaults);
 };
@@ -55,8 +55,6 @@ var defineGrid = function(element, object){
         flag = true;
     }
 
-    console.log(count)
-
     while (count > 0 && flag){
 
         lower[count-1].style.width = ((window.innerWidth / object.gridSize) * 2).toString() + 'px';
@@ -66,6 +64,24 @@ var defineGrid = function(element, object){
         lower[count-1].style.display = 'inline-block';
 
         count--;
+    }
+    sharedStyles();
+};
+
+var sharedStyles = function(){
+    var upperCells = document.querySelectorAll('[class*="upper_"]');
+    var lowerCells = document.querySelectorAll('[class*="lower_"]');
+    var allCells = [];
+
+    for (var i = 0; i < (upperCells.length * 2); i++){
+        i < upperCells.length ? allCells.push(lowerCells[i]) : allCells.push(upperCells[i - upperCells.length]);
+    }
+
+    var colours = ['#DEA5A4', '#FFB347', '#779ECB', '#CB99C9', '#C23B22', '#966FD6'];
+
+    for (var i = 0; i < allCells.length; i++){
+        console.log(allCells[i])
+        allCells[i].style.backgroundColor = colours[i];
     }
 };
 
