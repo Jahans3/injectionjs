@@ -78,10 +78,13 @@ var sharedStyles = function(){
     }
 
     var colours = ['#DEA5A4', '#FFB347', '#779ECB', '#CB99C9', '#C23B22', '#966FD6'];
+    var colour = 0;
 
     for (var i = 0; i < allCells.length; i++){
-        console.log(allCells[i])
-        allCells[i].style.backgroundColor = colours[i];
+        allCells[i].style.backgroundColor = colours[colour];
+        allCells[i].style.verticalAlign = 'top';
+
+        colour > 4 ? colour = 0 : colour++
     }
 };
 
